@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Wet+Paint&family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Wet+Paint&family=SUSE:wght@100..800&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: linear-gradient(90deg, #dfcedf, transparent);
+}
+:root{
+    --font1: "Anton", sans-serif;
+    --font2:'Josefin Sans';
+
+}
+.head{
+    background-color: transparent;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    height: 12vh;
+    text-align: center;
+    align-items: center;
+    font-family: var(--font2);
+}
+nav .right-logo{
+    font-size: 30px;
+    font-family: var(--font1);
+    color: black;
+}
+nav a {
+    margin: 0 33px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+
+}
+nav button{
+    padding: 10px 30px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+
+h1{
+    font-family: var(--font1);
+}
+
+/* main-section */
+.Lading-page{
+    
+    margin: auto;
+    height: auto; 
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+}
+.right{
+    width: 31rem;
+    height: auto;
+    position: relative;
+}
+.right h1{
+    font-size: 4rem;
+    font-family: var(--font1); 
+    letter-spacing: 2px;
+}
+.right p{
+    font-family: var(--font2);
+    font-size: 20px;
+    margin: 20px 0;
+}
+.right button{
+    padding: 10px 50px;
+    border: 1px solid black;
+    border-radius: 15px;
+  background-image: linear-gradient(to left, #7E60BF,#FF7ED4);
+    font-size: 15px;
+    margin: 0 30px;
+
+}
+.robotimg{
+    
+animation: robot 20s linear  infinite ;
+}
+
+/* brands sec */
+.brands{
+    height: auto;
+    background: linear-gradient(275deg, #f2e9f2, transparent);
+   overflow: hidden;
+}
+.brand{ 
+    white-space: nowrap; 
+    
+}
+
+@keyframes slider {
+    from{
+       transform: translateX(0);
+    }
+    to{
+      transform: translateX(-100%);
+    }
+    
+}
+
+.brands h3{
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--font2);
+    padding: 20px 0;
+}
+.brands-logo{
+    display: inline-block;
+    animation: slider 15s   infinite linear; 
+}
+
+.brands-logo img{ 
+    height: 5rem; 
+    padding: 10px 30px;
+}
+
+/* footer */
+.footer{
+    height: 50vh;
+    background-color: #f1dbea;
+    text-align: center;
+}
+.logo{
+   
+    padding: 45px 0;
+    font-family: fantasy;
+}
+
+
+/* animtion-image */
+.box{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.bganimate{ 
+    position: absolute;
+    top: 150px;
+    right:15rem;
+    z-index: -1; 
+    padding: 4rem;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    align-content: center;
+}
+
+@keyframes robot {
+    0%{
+            background-color: transparent;
+    }
+    20%{
+        scale: 0.5;
+        transform: rotate(45deg);
+    }
+    40%{
+        transform: translate(44px , 44px);
+    }
+}
+
+@keyframes example{
+    0%{
+        background-color: rgb(232, 225, 232);
+        border-radius: 30px;
+    }
+    25%{
+        /*border-radius: 50%;*/
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        
+    }
+    50%{
+         border-bottom-left-radius: 50px;
+         border-top-left-radius: 50px;
+         scale:3;
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* responisive design */
+@media only screen and (max-width:500px){
+    
+     nav{
+        display: flex;
+        flex-direction: column;
+     }
+     .mid-links{
+        margin: 20px 0;
+     }
+     .mid-links a{
+        margin: 0 10px;
+        font-size: 20px;
+     }
+.Lading-page{
+    flex-direction: column;
+}
+.right{
+    width: 20rem;
+    margin: 5rem auto;
+}
+ .right-btn{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.bganimate{
+    top: 57rem;
+    right: 10rem;
+}
+
+}
